@@ -23,57 +23,56 @@ public class App {
 
     }
 
-    public static double calculate(double num1, double num2){
+    public static void menu(){
 
-        String option = getString("What would you like to do? \n add \n subtract \n multiply \n divide");
+         String select = getString("Welcome to the SIMPLE CALCULATOR! \n  What would you like to do? (please type a number) \n 1. add \n 2. subtract \n 3. multiply \n 4. divide");
 
-        double sum = 0; 
+         if (select.equals("1")){
 
-        if (option.equals("add")) 
-            System.out.println(String.format("Adding: %.2f and %.2f", num1, num2));
-            sum = Calculator.add(num1, num2);
-        
+            double num1 = getDouble("Input first number.");
+            double num2 = getDouble("Input second number.");
+            double add = Calculator.add(num1, num2);
+            System.out.println("Answer = " + add);
 
-        if (option.equals("subtract")) 
-            System.out.println(String.format("Subtracting: %.2f and %.2f", num1, num2));
-            sum = Calculator.subtract(num1, num2);
-        
+         }
 
-        if (option.equals("multiply")) 
-            System.out.println(String.format("Multilplying: %.2f and %.2f", num1, num2));
-            sum = Calculator.multiply(num1, num2);
-        
+         if (select.equals("2")){
 
-        if (option.equals("divide"))
-            System.out.println(String.format("Dividing: %.2f and %.2f", num1, num2));
-            sum = Calculator.divide(num1, num2);
-        
+            double num1 = getDouble("Input first number.");
+            double num2 = getDouble("Input second number.");
+            double sub = Calculator.subtract(num1, num2);
+            System.out.println("Answer = " + sub);
 
-        return sum;
+         }
 
+         if (select.equals("3")){
+
+            double num1 = getDouble("Input first number.");
+            double num2 = getDouble("Input second number.");
+            double mult = Calculator.multiply(num1, num2);
+            System.out.println("Answer = " + mult);
+
+         }
+
+         if (select.equals("4")){
+
+            double num1 = getDouble("Input first number.");
+            double num2 = getDouble("Input second number.");
+            double div = Calculator.divide(num1, num2);
+
+            System.out.println("Answer = " + div);
+
+         }
+
+         
+         
     }
 
 
     public static void main(String[] args) {
         
-        while (true) {
-
-        double dub1 = getDouble("Input first number.");
-        double dub2 = getDouble("Input second number.");
-            
-           calculate(dub1, dub2);
-
-        String response = getString("Would you like to input again? (Y/N)");
-
-            if (response.equals("N")) {
-                System.out.println("Goodbye.");
-                break;
-            }
-
-        }
-      
-
-
+        menu(); 
+        
     }
 
 }
