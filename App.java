@@ -25,7 +25,7 @@ public class App {
 
     public static void menu(){
 
-         String select = getString("o====================================o\n++ Welcome to the SIMPLE CALCULATOR! ++\no====================================o\nWhat would you like to do? (please type a number) \n    1. add \n    2. subtract \n    3. multiply \n    4. divide \no====================================o\nTo exit program type 'exit'\no====================================o");
+         String select = getString("o====================================o\n++ WELCOME TO THE SIMPLE CALCULATOR! ++\no====================================o\nWhat would you like to do? (please type a number) \n    1. add \n    2. subtract \n    3. multiply \n    4. divide \no====================================o\nTo exit program type 'exit'\no====================================o");
         
          if (select.equals("1")){
 
