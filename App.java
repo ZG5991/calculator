@@ -25,7 +25,7 @@ public class App {
 
     public static void menu(){
 
-         String select = getString("Welcome to the SIMPLE CALCULATOR! \n  What would you like to do? (please type a number) \n 1. add \n 2. subtract \n 3. multiply \n 4. divide");
+         String select = getString("Welcome to the ZACH'S CALCULATOR! \n  What would you like to do? (please type a number) \n 1. add \n 2. subtract \n 3. multiply \n 4. divide");
 
          if (select.equals("1")){
 
