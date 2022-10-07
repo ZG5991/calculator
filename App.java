@@ -25,14 +25,14 @@ public class App {
 
     public static void menu(){
 
-         String select = getString("Welcome to the ZACH'S CALCULATOR! \n  What would you like to do? (please type a number) \n 1. add \n 2. subtract \n 3. multiply \n 4. divide");
-
+         String select = getString("o====================================o\n++ WELCOME TO THE SIMPLE CALCULATOR! ++\no====================================o\nWhat would you like to do? (please type a number) \n    1. add \n    2. subtract \n    3. multiply \n    4. divide \no====================================o\nTo exit program type 'exit'\no====================================o");
+        
          if (select.equals("1")){
 
             double num1 = getDouble("Input first number.");
             double num2 = getDouble("Input second number.");
             double add = Calculator.add(num1, num2);
-            System.out.println("Answer = " + add);
+            System.out.println("Answer = [ " + add + " ]");
 
          }
 
@@ -41,7 +41,7 @@ public class App {
             double num1 = getDouble("Input first number.");
             double num2 = getDouble("Input second number.");
             double sub = Calculator.subtract(num1, num2);
-            System.out.println("Answer = " + sub);
+            System.out.println("Answer = [ " + sub +" ]");
 
          }
 
@@ -50,7 +50,7 @@ public class App {
             double num1 = getDouble("Input first number.");
             double num2 = getDouble("Input second number.");
             double mult = Calculator.multiply(num1, num2);
-            System.out.println("Answer = " + mult);
+            System.out.println("Answer = [ " + mult + " ]");
 
          }
 
@@ -60,19 +60,38 @@ public class App {
             double num2 = getDouble("Input second number.");
             double div = Calculator.divide(num1, num2);
 
-            System.out.println("Answer = " + div);
+            System.out.println("Answer = [ " + div + " ]");
 
          }
 
-         
-         
-    }
+         if (select.equals("exit")) {
+
+            System.out.println("Goodbye.");
+             System.exit(0);
+
+         }
+
+        }
 
 
     public static void main(String[] args) {
-        
+    
+        while (true) {
+
         menu(); 
-        
+
+        String input = getString("Resetting...");
+
+        if (input.equals("exit")) {
+
+            System.out.println("Goodbye.");
+             break;
+
+         }
+ 
+
     }
+
+}
 
 }
